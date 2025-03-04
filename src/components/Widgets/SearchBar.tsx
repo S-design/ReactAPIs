@@ -13,7 +13,7 @@ export default function SearchBar({ searchTerm, onSearch }: SearchBarProps) {
       placeholder="Search for a dataset..."
       value={searchTerm}
       onChange={onSearch}
-      className="search-bar"
+      className="searchBar"
     />
   );
 }

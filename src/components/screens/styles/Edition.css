@@ -1,4 +1,4 @@
-.editions-container {
+.container {
   max-width: 800px;
   margin: auto;
   padding: 20px;
@@ -13,18 +13,18 @@
   cursor: pointer;
 }
 
-.editions-list {
+.list {
   list-style: none;
   padding: 0;
 }
 
-.edition-item {
+.item {
   border: 1px solid #ddd;
   padding: 10px;
   margin-bottom: 10px;
 }
 
-.view-version-button {
+.view-button {
   margin-top: 5px;
   padding: 5px 10px;
   background-color: #28a745;

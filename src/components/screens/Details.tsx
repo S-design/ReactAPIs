@@ -85,7 +85,7 @@ export default function Details() {
   if (!dataset) return <p>No dataset found.</p>;
 
   return (
-    <div className="dataset-details">
+    <div className="details">
       <button onClick={() => navigate("/")}>Home</button>
       <h1>{dataset.title}</h1>
       <p>{dataset.description}</p>
@@ -93,7 +93,7 @@ export default function Details() {
 
       <h2>Latest Edition</h2>
       {latestVersion ? (
-        <div className="latest-version">
+        <div className="latest-v">
           <p><strong>Edition:</strong> {latestVersion.edition}</p>
           <p><strong>Version:</strong> {latestVersion.version}</p>
           <p><strong>Release Date:</strong> {latestVersion.release_date || "Unknown"}</p>
@@ -118,7 +118,7 @@ export default function Details() {
         <p>No latest version available.</p>
       )}
       <button
-        className="view-editions-button"
+        className="view-button"
         onClick={() => {
           if (latestVersion?.edition) {
             navigate(`/dataset/${datasetId}/edition/${latestVersion.edition}`);

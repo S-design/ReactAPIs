@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
+import "./styles/Edition.css";
 
 
 interface Version {
@@ -18,7 +19,7 @@ export default function EditionScreen() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
-  const versionsPerPage = 10; 
+  const versionsPerPage = 4; 
   const navigate = useNavigate();
 
   const API_URL = `https://api.beta.ons.gov.uk/v1/datasets/${datasetId}/editions/${edition}/versions`;
@@ -48,16 +49,16 @@ export default function EditionScreen() {
   if (versions.length === 0) return <p>No versions available.</p>;
 
   return (
-    <div className="versions-container">
+    <div className="container">
       <button className="back-button" onClick={() => navigate(`/dataset/${datasetId}`)}>
         Back to Latest Edition
       </button>
 
       <h1>Versions for {edition}</h1>
 
-      <ul className="versions-list">
+      <ul className="list">
         {displayedVersions.map((version) => (
-          <li key={version.id} className="version-item">
+          <li key={version.id} className="item">
             <strong>Version:</strong> {version.version} <br />
             <strong>Release Date:</strong> {version.release_date || "Unknown"} <br />
             <h3>Download Data:</h3>

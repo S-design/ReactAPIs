@@ -1,17 +1,7 @@
-.dataset-details {
+.details {
     margin-top: 20px;
     padding: 15px;
     border: 1px solid #ddd;
     background: white;
-  }
-  
-  .details-title {
-    font-size: 20px;
-    font-weight: bold;
-  }
-  
-  .details-link {
-    color: blue;
-    text-decoration: underline;
   }
   
