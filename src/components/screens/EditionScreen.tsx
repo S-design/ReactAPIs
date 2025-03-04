@@ -12,7 +12,7 @@ interface Version {
   };
 }
 
-export default function EditionVersionsScreen() {
+export default function EditionScreen() {
   const { datasetId, edition } = useParams<{ datasetId: string; edition: string }>();
   const [versions, setVersions] = useState<Version[]>([]);
   const [loading, setLoading] = useState(true);
