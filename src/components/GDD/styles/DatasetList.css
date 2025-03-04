@@ -1,0 +1,29 @@
+.dataset-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .dataset-item {
+    flex: 1 1 30%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background: white;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .dataset-item:hover {
+    background: #f8f8f8;
+  }
+  
+  .dataset-title {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .dataset-description {
+    font-size: 14px;
+    color: #555;
+  }
+  

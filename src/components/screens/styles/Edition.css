@@ -1,0 +1,34 @@
+.editions-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+.back-button {
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.editions-list {
+  list-style: none;
+  padding: 0;
+}
+
+.edition-item {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.view-version-button {
+  margin-top: 5px;
+  padding: 5px 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
