@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import DatasetSearch from "../Widgets/SearchBar";
 import DatasetList from "../Widgets/DatasetList";
-
+import "./styles/Main.css";
 
 interface Dataset {
   id: string;

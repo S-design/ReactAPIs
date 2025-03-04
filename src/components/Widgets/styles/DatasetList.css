@@ -1,14 +1,15 @@
-.list {
+.data-list {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
   }
   
-  .item {
+  .data-item {
     flex: 1 1 30%;
     padding: 10px;
-    border: 1px solid #ddd;
-    background: white;
+    border: 1px solid #525252;
+    border-radius: 5px;
+    background: #808080;
     cursor: pointer;
     transition: background 0.3s;
   }
@@ -17,13 +18,13 @@
     background: #f8f8f8;
   }
   
-  .title {
+  .data-title {
     font-size: 16px;
     font-weight: bold;
   }
   
-  .description {
+  .data-description {
     font-size: 14px;
-    color: #555;
+    color: white;
   }
   

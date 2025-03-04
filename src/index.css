@@ -1,10 +1,9 @@
 body {
   font-family: 'Roboto', Tahoma, Arial, sans-serif;
-  background-color: #f4f4f4;
   margin: 0;
   padding: 0;
+  background-color: #383838;
 }
-
 
 .title {
   text-align: center;

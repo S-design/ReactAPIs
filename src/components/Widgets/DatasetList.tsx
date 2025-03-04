@@ -20,15 +20,15 @@ export default function DatasetList({ datasets }: DatasetListProps) {
   const navigate = useNavigate();
 
   return (
-    <div className="list">
+    <div className="data-list">
       {datasets.map((dataset) => (
         <div
           key={dataset.id}
-          className="item"
+          className="data-item"
           onClick={() => navigate(`/dataset/${dataset.id}`)} 
         >
-          <h2 className="title">{dataset.title}</h2>
-          <p className="description">{dataset.description}</p>
+          <h2 className="data-title">{dataset.title}</h2>
+          <p className="data-description">{dataset.description}</p>
         </div>
       ))}
     </div>
