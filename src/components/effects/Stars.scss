@@ -1,0 +1,44 @@
+@use "sass:math";
+
+@function random-percent() {
+  @return math.random() * 100%; // Generates a percentage for positioning
+}
+
+@function random-duration() {
+  @return (math.random() * 5 + 3) * 1s; // Duration between 3s and 8s
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: math.random(); // Random initial opacity
+  }
+  50% {
+    opacity: math.random(); // Change opacity randomly at the midpoint
+  }
+}
+
+.stars {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  overflow: hidden;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  animation: twinkle infinite;
+  
+  @for $i from 1 through 100 {
+    &:nth-child(#{$i}) {
+      top: random-percent();
+      left: random-percent();
+      animation-duration: random-duration();
+      animation-delay: math.random() * 5s; // Random delay to stagger twinkling
+    }
+  }
+}

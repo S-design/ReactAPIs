@@ -38,8 +38,6 @@ export default function MainScreen() {
 
   return (
     <div className="dataset-container">
-      <button onClick={() => navigate("/history")}>View Download History</button>
-
       <h1 className="dataset-title">Dataset Explorer</h1>
       <DatasetSearch searchTerm={searchTerm} onSearch={handleSearch} />
       <DatasetList datasets={filteredDatasets} />
