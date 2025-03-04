@@ -1,0 +1,64 @@
+.history-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: #222;
+    color: white;
+    border-radius: 10px;
+  }
+  
+  h1, h2 {
+    text-align: center;
+  }
+  
+  .history-section {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #333;
+    border-radius: 8px;
+  }
+  
+  .history-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .history-item {
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #444;
+    border-radius: 5px;
+  }
+  
+  .timestamp {
+    font-size: 12px;
+    color: #ccc;
+  }
+  
+  .no-history {
+    text-align: center;
+    color: gray;
+  }
+  
+  .clear-button {
+    display: block;
+    margin: 10px auto;
+    padding: 5px 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .back-button {
+    display: block;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  

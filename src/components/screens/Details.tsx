@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-
 import axios from "axios";
 import "./styles/Details.css";
 
@@ -73,12 +72,21 @@ export default function Details() {
       });
   };
 
+  const handleDownload = (datasetName: string) => {
+    const newEntry = { dataset: datasetName, timestamp: new Date().toLocaleString() };
+    const downloadHistory = JSON.parse(localStorage.getItem("downloadHistory") || "[]");
+    downloadHistory.unshift(newEntry);
+    localStorage.setItem("downloadHistory", JSON.stringify(downloadHistory.slice(0, 10))); // Keep last 10 downloads
+  };
+  
+
   if (loading) return <p>Loading dataset details...</p>;
   if (error) return <p className="error">{error}</p>;
   if (!dataset) return <p>No dataset found.</p>;
 
   return (
     <div className="dataset-details">
+      <button onClick={() => navigate("/")}>Home</button>
       <h1>{dataset.title}</h1>
       <p>{dataset.description}</p>
       <p><strong>Release Frequency:</strong> {dataset.release_frequency}</p>
@@ -97,7 +105,7 @@ export default function Details() {
               <ul>
                 {Object.entries(latestVersion.downloads).map(([format, link], index) => (
                   <li key={index}>
-                    <a href={link.href} target="_blank" rel="noopener noreferrer">
+                    <a href={link.href} target="_blank" rel="noopener noreferrer" onClick={() => handleDownload(dataset.title)}>
                       {format.toUpperCase()}
                     </a>
                   </li>

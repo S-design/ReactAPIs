@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import DatasetSearch from "../GDD/SearchBar";
-import DatasetList from "../GDD/DatasetList";
+import DatasetSearch from "../Widgets/SearchBar";
+import DatasetList from "../Widgets/DatasetList";
+import { useNavigate } from "react-router-dom";
 
 interface Dataset {
   id: string;
@@ -15,9 +16,10 @@ interface Dataset {
 
 const API_URL = "https://api.beta.ons.gov.uk/v1/datasets";
 
-export default function GDDScreen() {
+export default function MainScreen() {
   const [datasets, setDatasets] = useState<Dataset[]>([]);
   const [searchTerm, setSearchTerm] = useState<string>("");
+  const navigate = useNavigate();
 
   useEffect(() => {
     axios
@@ -36,6 +38,8 @@ export default function GDDScreen() {
 
   return (
     <div className="dataset-container">
+      <button onClick={() => navigate("/history")}>View Download History</button>
+
       <h1 className="dataset-title">Dataset Explorer</h1>
       <DatasetSearch searchTerm={searchTerm} onSearch={handleSearch} />
       <DatasetList datasets={filteredDatasets} />
