@@ -86,7 +86,6 @@ export default function Details() {
 
   return (
     <div className="details">
-      <button onClick={() => navigate("/")}>Home</button>
       <h1>{dataset.title}</h1>
       <p>{dataset.description}</p>
       <p><strong>Release Frequency:</strong> {dataset.release_frequency}</p>

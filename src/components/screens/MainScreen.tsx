@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import DatasetSearch from "../Widgets/SearchBar";
 import DatasetList from "../Widgets/DatasetList";
-import { useNavigate } from "react-router-dom";
+
 
 interface Dataset {
   id: string;
@@ -19,7 +19,7 @@ const API_URL = "https://api.beta.ons.gov.uk/v1/datasets";
 export default function MainScreen() {
   const [datasets, setDatasets] = useState<Dataset[]>([]);
   const [searchTerm, setSearchTerm] = useState<string>("");
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   useEffect(() => {
     axios
