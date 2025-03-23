@@ -1,0 +1,64 @@
+/* Container background */
+.cyborg-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: radial-gradient(circle at center, #000000, #0a0a0a, #1a1a1a);
+  }
+  
+  /* Main cyborg head */
+  .cyborg {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    background: linear-gradient(to bottom, #4e4e50, #2a2a2a);
+    border-radius: 50% / 40%;
+    box-shadow: inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+                inset 5px 5px 15px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Eyes */
+  .eye {
+    position: absolute;
+    top: 80px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+  
+  .eye.left {
+    left: 40px;
+    background: radial-gradient(circle, red, darkred);
+    box-shadow: 0 0 10px red, 0 0 20px red;
+  }
+  
+  .eye.right {
+    right: 40px;
+    background: radial-gradient(circle, #555, #222);
+    box-shadow: inset 2px 2px 5px #000;
+  }
+  
+  /* Mouth */
+  .mouth {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 10px;
+    background: #111;
+    border-radius: 5px;
+  }
+  
+  /* Wires coming out the side */
+  .wires {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: 40px;
+    height: 5px;
+    background: linear-gradient(to right, red, blue, green);
+    box-shadow: 0 0 5px cyan;
+  }
+  

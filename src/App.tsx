@@ -6,6 +6,7 @@ import MainScreen from "./components/screens/MainScreen";
 import SearchHistory from "./components/screens/SearchHistory";
 import NavBar from "./components/Widgets/NavBar";
 // import Stars from "./components/effects/Stars";
+import Cborg from "./components/screens/Cborg";
 import "./App.css";
 
 export default function App() {
@@ -16,6 +17,7 @@ export default function App() {
       <NavBar />
       <Routes>
         <Route path="/" element={<MainScreen />} />
+        <Route path="/Cborg" element={<Cborg />} />
         <Route path="/dataset/:datasetId" element={<Details />} />
         <Route path="/dataset/:datasetId/edition/:edition" element={<EditionScreen />} />
         <Route path="/history" element={<SearchHistory />} />
